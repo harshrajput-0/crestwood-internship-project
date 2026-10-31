@@ -4,6 +4,6 @@ import { registration, getRegistration } from "../controllers/registration.contr
 const router = Router();
 
 router.post("/", registration);
-router.get("/", getRegistration);
+router.post("/lookup", getRegistration);
 
 export default router;
