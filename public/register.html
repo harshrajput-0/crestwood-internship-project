@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect - Registration</title>
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+
+        <header class="nav">
+      <div class="wrap nav__row">
+        <a href="index.html" class="logo" aria-label="Crestwood home">
+          <svg viewBox="0 0 48 44" width="52" height="48" aria-hidden="true">
+            <path d="M24 2 2 12l22 10 22-10z" fill="#fff" />
+            <path d="M11 21v11c0 3 6 7 13 7s13-4 13-7V21l-13 6z" fill="#1d8cf0" />
+            <path d="M42 14v14" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+          </svg>
+          <span>Crest<b>wood</b></span>
+        </a>
+        <nav id="menu" class="nav__links" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="events.html">Events</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+          <div class="nav__mobile-actions">
+            <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+            <a href="register.html" class="btn btn--primary is-active">Register</a>
+          </div>
+        </nav>
+        <div class="nav__actions">
+          <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+          <a href="register.html" class="btn btn--primary">Register</a>
+        </div>
+        <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"
+          aria-controls="menu"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main class="registration-container">
+        <h2>Event Registration</h2>
+
+        <p class="subtitle">Fill in your details to get started.</p>
+
+<p id="formMessage" class="form-message" hidden></p>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="studentName"
+                    placeholder="Enter your full name"
+                    required
+                    minlength="5"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Your Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    pattern="[6-9][0-9]{9}"
+                    required
+                >
+                </div>
+
+                <div class="form-group">
+                <label for="password">Set a Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Choose a password (min 6 characters)"
+                    minlength="6"
+                    required
+                >
+                <small>You'll need this password to view your registrations on the dashboard.</small>
+                </div>
+
+                <div class="form-group">
+                <label for="eventId">Select Event Category</label>
+                <select id="eventId" name="eventId" required>
+                <option value="">-- Loading events --</option>
+    </select>
+</div>
+
+            <button type="submit" id="submitButton">Submit Registration</button>
+        </form>
+    </main>
+
+        <footer class="footer">
+      <div class="wrap footer__row">
+        <div><a href="index.html" class="logo logo--sm"><span>Crest<b>wood</b></span></a>
+          <p>Discover, join and celebrate campus life.</p>
+        </div>
+        <nav aria-label="Footer"><a href="index.html">Home</a><a href="events.html">Events</a><a
+            href="about.html">About</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
+        <p class="footer__copy">&copy; 2026 Crestwood. All rights reserved.</p>
+      </div>
+    </footer>
+
+       <script src="./js/nav.js"></script>
+       <script src="./js/api.js"></script>
+    <script src="./js/register.js"></script>
+
+</body>
+</html>

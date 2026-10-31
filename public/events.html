@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Campus Events | Campus Connect</title>
+
+  <link rel="stylesheet" href="./css/header-footer.css">
+  <link rel="stylesheet" href="./css/events.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="events-page">
+
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="wrap nav__row">
+      <a href="index.html" class="logo" aria-label="Crestwood home">
+        <svg viewBox="0 0 48 44" width="52" height="48" aria-hidden="true">
+          <path d="M24 2 2 12l22 10 22-10z" fill="#fff" />
+          <path d="M11 21v11c0 3 6 7 13 7s13-4 13-7V21l-13 6z" fill="#1d8cf0" />
+          <path d="M42 14v14" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <span>Crest<b>wood</b></span>
+      </a>
+      <nav id="menu" class="nav__links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="events.html" class="is-active">Events</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <div class="nav__mobile-actions">
+          <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+          <a href="register.html" class="btn btn--primary">Register</a>
+        </div>
+      </nav>
+      <div class="nav__actions">
+        <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+        <a href="register.html" class="btn btn--primary">Register</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <header class="events-hero">
+    <p class="events-eyebrow">DISCOVER YOUR CAMPUS</p>
+    <h1>Explore Campus Events</h1>
+    <p>
+      Find exciting activities, learn new skills, meet people,
+      and make the most of your campus experience.
+    </p>
+
+    <a href="#all-events" class="events-hero-button">
+      Explore Events <span aria-hidden="true">↓</span>
+    </a>
+  </header>
+
+  <main class="events-container" id="all-events">
+
+    <!-- Search -->
+    <section class="events-search-section">
+      <label for="eventSearch">Find your next event</label>
+
+      <div class="events-search-box">
+        <span aria-hidden="true">⌕</span>
+        <input
+          type="search"
+          id="eventSearch"
+          placeholder="Search event name, category, or location..."
+          autocomplete="off"
+        >
+      </div>
+      <p class="events-search-hint">
+        Search by event name, category, or location.
+      </p>
+    </section>
+
+    <!-- Heading and result count -->
+    <div class="events-section-heading">
+      <div>
+        <p class="events-eyebrow events-blue-text">WHAT'S HAPPENING</p>
+        <h2>Explore All Events</h2>
+        <p class="events-section-description">
+          Find something that interests you.
+        </p>
+      </div>
+
+      <span id="eventCount" class="events-count">6 events</span>
+    </div>
+
+    <!-- Category filters -->
+    <div class="events-filters" aria-label="Filter events by category">
+      <button type="button" class="events-filter active" data-category="All">
+        All Events
+      </button>
+
+      <button type="button" class="events-filter" data-category="Technical">
+        Technical
+      </button>
+
+      <button type="button" class="events-filter" data-category="Cultural">
+        Cultural
+      </button>
+
+      <button type="button" class="events-filter" data-category="Workshop">
+        Workshop
+      </button>
+
+      <button type="button" class="events-filter" data-category="Symposium">
+        Symposium
+      </button>
+
+      <button type="button" class="events-filter" data-category="Sports">
+        Sports
+      </button>
+    </div>
+
+        <!-- Loading / error states -->
+    <p id="eventsLoading" class="events-empty">Loading events…</p>
+    <p id="eventsError" class="events-empty" hidden>
+      Could not load events right now. Please try again shortly.
+    </p>
+
+ <!-- Event cards (filled in from the API by js/events.js) -->
+    <section class="events-grid" id="eventsGrid" hidden></section>
+
+    <!-- Empty search result -->
+    <p id="eventsEmpty" class="events-empty" hidden>
+      No events found. Try another search or category.
+    </p>
+
+    <!-- Bottom call to action -->
+    <section class="events-bottom-cta">
+      <div>
+        <p class="events-eyebrow">YOUR CAMPUS JOURNEY</p>
+        <h2>Ready to Get Involved?</h2>
+        <p>Choose an event, meet new people, and make new memories.</p>
+      </div>
+
+      <a href="register.html" class="events-bottom-button">
+        Join an Event
+      </a>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="wrap footer__row">
+      <div><a href="index.html" class="logo logo--sm"><span>Crest<b>wood</b></span></a>
+        <p>Discover, join and celebrate campus life.</p>
+      </div>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="events.html">Events</a><a
+          href="about.html">About</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
+      <p class="footer__copy">&copy; 2026 Crestwood. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./js/nav.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/events.js"></script>
+
+</body>
+</html>

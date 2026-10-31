@@ -1,0 +1,157 @@
+/* White registration form card */
+.registration-container {
+    background: #ffffff;
+    width: 90%;
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(18, 60, 105, 0.15);
+}
+
+.registration-container h2 {
+    color: #123c69;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 28px;
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+/* Text, email, and phone inputs */
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #80caff;
+    border-radius: 7px;
+    background: #f0f8ff;
+    color: #111827;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #123c69;
+    box-shadow: 0 0 0 3px rgba(128, 202, 255, 0.35);
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+/* Flagged on a field after the server rejects it (e.g. wrong password) */
+input.input-invalid {
+    border-color: #d14343;
+    background: #fdecec;
+}
+
+input.input-invalid:focus {
+    border-color: #d14343;
+    box-shadow: 0 0 0 3px rgba(209, 67, 67, 0.25);
+}
+
+/* Event category dropdown */
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #80caff;
+    border-radius: 7px;
+    background: #f0f8ff;
+    color: #111827;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+select:focus {
+    border-color: #123c69;
+    box-shadow: 0 0 0 3px rgba(128, 202, 255, 0.35);
+}
+
+/* Navy-blue submit button */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #123c69;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #205b94;
+    transform: translateY(-2px);
+}
+
+.form-message {
+    padding: 12px 14px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-message.success {
+    background: #e6f7ec;
+    color: #1a7f3c;
+    border: 1px solid #a6e6bd;
+}
+
+.form-message.error {
+    background: #fdecec;
+    color: #b42318;
+    border: 1px solid #f5b5b1;
+}
+
+button[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #123c69;
+    font-size: 13px;
+    padding: 15px;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    .registration-container {
+        padding: 24px 20px;
+        margin: 25px auto;
+    }
+
+    .registration-container h2 {
+        font-size: 23px;
+    }
+}

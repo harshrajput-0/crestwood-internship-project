@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/contact.css">
+
+    <title>Contact US</title>
+</head>
+
+<body>
+      <header class="nav">
+    <div class="wrap nav__row">
+      <a href="index.html" class="logo" aria-label="Crestwood home">
+        <svg viewBox="0 0 48 44" width="52" height="48" aria-hidden="true">
+          <path d="M24 2 2 12l22 10 22-10z" fill="#fff" />
+          <path d="M11 21v11c0 3 6 7 13 7s13-4 13-7V21l-13 6z" fill="#1d8cf0" />
+          <path d="M42 14v14" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <span>Crest<b>wood</b></span>
+      </a>
+      <nav id="menu" class="nav__links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="is-active">Contact</a>
+        <div class="nav__mobile-actions">
+          <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+          <a href="register.html" class="btn btn--primary">Register</a>
+        </div>
+      </nav>
+      <div class="nav__actions">
+        <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+        <a href="register.html" class="btn btn--primary">Register</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+    <div class="hero">
+        <div class="label">WE'D LOVE TO HEAR FROM YOU</div>
+        <h1>Contact Us</h1>
+        <p>Questions about an upcoming event, your registration, or campus life in general? Send us a message and the team will get back to you.</p>
+    </div>
+
+    <section id="contact">
+        <div class="left card">
+            <div class="label">GET IN TOUCH</div>
+            
+            <h2>Reach Campus Connect</h2>
+
+            <p class="sub-title">Pick a date, time and party size. We confirm by phone within the hour. Tables
+                are held for 15 minutes.</p>
+
+            <div class="info" id="contact">
+                <p><strong>Our Address</strong>14, Qaiserbagh Road, Lucknow, UP</p>
+                <p><strong>Phone no.</strong>0522 400 0000</p>
+                <p><strong>Working Hours</strong>Daily, 12 pm – 11 pm</p>
+                <p><strong>Email Address
+                    </strong>hello@stackhouse.example</p>
+            </div>
+        </div>
+
+        <div class="right card">
+            <div class="label">SEND A MESSAGE</div>
+            <h2>We'll Reply Within a Day</h2>
+            <form id="contactForm">
+                <label>Your Name <input type="text" id="contactName" placeholder="Name" required></label>
+                <label>Your Email <input type="email" id="contactEmail" placeholder="Email" required></label>
+                <label>Your Phone <input type="tel" id="contactPhone" placeholder="10 digit phone number"></label>
+                <label>Message <textarea id="contactMessage" placeholder="Your message..." required></textarea></label>
+                <p id="contactFormMessage" class="form-note" hidden></p>
+                <button type="submit" class="btn btn--primary" id="contactSubmitButton">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+        <footer class="footer">
+      <div class="wrap footer__row">
+        <div><a href="index.html" class="logo logo--sm"><span>Crest<b>wood</b></span></a>
+          <p>Discover, join and celebrate campus life.</p>
+        </div>
+        <nav aria-label="Footer"><a href="index.html">Home</a><a href="events.html">Events</a><a
+            href="about.html">About</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
+        <p class="footer__copy">&copy; 2026 Crestwood. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/contact.js"></script>
+</body>
+
+</html>

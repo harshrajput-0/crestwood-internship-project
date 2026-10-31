@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Student Dashboard | Campus Connect</title>
+  <link rel="stylesheet" href="./css/header-footer.css">
+  <link rel="stylesheet" href="./css/dashboard.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="student-dashboard">
+
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="wrap nav__row">
+      <a href="index.html" class="logo" aria-label="Crestwood home">
+        <svg viewBox="0 0 48 44" width="52" height="48" aria-hidden="true">
+          <path d="M24 2 2 12l22 10 22-10z" fill="#fff" />
+          <path d="M11 21v11c0 3 6 7 13 7s13-4 13-7V21l-13 6z" fill="#1d8cf0" />
+          <path d="M42 14v14" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <span>Crest<b>wood</b></span>
+      </a>
+      <nav id="menu" class="nav__links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <div class="nav__mobile-actions">
+          <a href="dashboard.html" class="btn btn--ghost is-active">Dashboard</a>
+          <a href="register.html" class="btn btn--primary">Register</a>
+        </div>
+      </nav>
+      <div class="nav__actions">
+        <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+        <a href="register.html" class="btn btn--primary">Register</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+
+    <!-- Welcome section -->
+    <section class="dashboard-welcome">
+      <div>
+        <p class="dashboard-eyebrow">STUDENT PORTAL</p>
+        <h1>Welcome Student!</h1>
+        <p class="dashboard-welcome-text">
+          Discover campus activities, keep track of your registrations,
+          and make the most of your university experience.
+        </p>
+      </div>
+
+      <a href="events.html" class="dashboard-primary-button">
+        Explore Events <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <!-- Email lookup: registrations are not behind auth, so a student
+         finds their own registrations by the email they registered with -->
+    <section class="dashboard-panel" style="margin-bottom: 24px;">
+      <div class="dashboard-section-heading">
+        <div>
+          <p class="dashboard-eyebrow dashboard-blue-text">FIND YOUR EVENTS</p>
+          <h2>Look Up Your Registrations</h2>
+        </div>
+      </div>
+      <form id="lookupForm" style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <input
+          type="email"
+          id="lookupEmail"
+          placeholder="Enter the email you registered with"
+          required
+          style="flex: 1; min-width: 220px; padding: 12px; border-radius: 7px; border: 1px solid #cbd5e1;"
+        >
+        <input
+          type="password"
+          id="lookupPassword"
+          placeholder="Enter your password"
+          required
+          style="flex: 1; min-width: 220px; padding: 12px; border-radius: 7px; border: 1px solid #cbd5e1;"
+        >
+        <button type="submit" class="dashboard-primary-button" style="flex-shrink: 0;">Find My Events</button>
+      </form>
+      <p id="lookupMessage" class="dashboard-demo-note" hidden></p>
+    </section>
+
+    <!-- Summary cards -->
+    <section class="dashboard-stats" aria-label="Event summary">
+
+      <article class="dashboard-stat-card">
+        <div class="dashboard-stat-icon icon-blue" aria-hidden="true">▦</div>
+        <p class="dashboard-stat-label">Registered Events</p>
+        <p class="dashboard-stat-number" id="statRegistered">0</p>
+        <p class="dashboard-stat-note">Events you have joined</p>
+      </article>
+
+      <article class="dashboard-stat-card">
+        <div class="dashboard-stat-icon icon-sky" aria-hidden="true">◷</div>
+        <p class="dashboard-stat-label">Upcoming Events</p>
+        <p class="dashboard-stat-number" id="statUpcoming">0</p>
+        <p class="dashboard-stat-note">Events coming up</p>
+      </article>
+
+      <article class="dashboard-stat-card">
+        <div class="dashboard-stat-icon icon-orange" aria-hidden="true">✓</div>
+        <p class="dashboard-stat-label">Completed Events</p>
+        <p class="dashboard-stat-number" id="statCompleted">0</p>
+        <p class="dashboard-stat-note">Events already attended</p>
+      </article>
+    </section>
+
+    <!-- Main dashboard content -->
+    <div class="dashboard-content-grid">
+
+      <!-- Registered events -->
+      <section class="dashboard-panel">
+        <div class="dashboard-section-heading">
+          <div>
+            <p class="dashboard-eyebrow dashboard-blue-text">YOUR ACTIVITIES</p>
+            <h2>My Registered Events</h2>
+          </div>
+
+          <a href="events.html" class="dashboard-text-link">View events →</a>
+        </div>
+
+        <div class="dashboard-event-list" id="registeredEventsList">
+          <p class="dashboard-demo-note">
+            Enter your email above to see the events you've registered for.
+          </p>
+        </div>
+      </section>
+
+      <!-- Quick links and categories -->
+      <aside class="dashboard-side-column">
+
+        <section class="dashboard-panel dashboard-quick-panel">
+          <div class="dashboard-section-heading">
+            <div>
+              <p class="dashboard-eyebrow dashboard-blue-text">GET STARTED</p>
+              <h2>Quick Links</h2>
+            </div>
+          </div>
+
+          <a class="dashboard-quick-link" href="events.html">
+            <span class="dashboard-quick-icon">▦</span>
+            <span>
+              <strong>Browse Events</strong>
+              <small>Discover campus activities</small>
+            </span>
+            <span class="dashboard-arrow">→</span>
+          </a>
+
+          <a class="dashboard-quick-link" href="register.html">
+            <span class="dashboard-quick-icon">＋</span>
+            <span>
+              <strong>Register for an Event</strong>
+              <small>Join an upcoming activity</small>
+            </span>
+            <span class="dashboard-arrow">→</span>
+          </a>
+
+          <a class="dashboard-quick-link" href="gallery.html">
+            <span class="dashboard-quick-icon">▧</span>
+            <span>
+              <strong>View Gallery</strong>
+              <small>Explore campus memories</small>
+            </span>
+            <span class="dashboard-arrow">→</span>
+          </a>
+        </section>
+
+        <section class="dashboard-join-card">
+          <div class="dashboard-join-symbol" aria-hidden="true">✦</div>
+          <h2>Make Campus Life Count</h2>
+          <p>
+            Learn something new, meet people, and discover your next
+            favourite campus event.
+          </p>
+          <a href="events.html" class="dashboard-join-button">
+            Find Your Next Event
+          </a>
+        </section>
+
+      </aside>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <div class="wrap footer__row">
+      <div><a href="index.html" class="logo logo--sm"><span>Crest<b>wood</b></span></a>
+        <p>Discover, join and celebrate campus life.</p>
+      </div>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="events.html">Events</a><a
+          href="about.html">About</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
+      <p class="footer__copy">&copy; 2026 Crestwood. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./js/nav.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/dashboard.js"></script>
+
+</body>
+</html>

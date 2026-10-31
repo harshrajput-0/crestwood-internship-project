@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Event Gallery | Campus Connect</title>
+
+  <link rel="stylesheet" href="./css/header-footer.css">
+  <link rel="stylesheet" href="./css/gallery.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="gallery-page">
+
+    <header class="nav">
+    <div class="wrap nav__row">
+      <a href="index.html" class="logo" aria-label="Crestwood home">
+        <svg viewBox="0 0 48 44" width="52" height="48" aria-hidden="true">
+          <path d="M24 2 2 12l22 10 22-10z" fill="#fff" />
+          <path d="M11 21v11c0 3 6 7 13 7s13-4 13-7V21l-13 6z" fill="#1d8cf0" />
+          <path d="M42 14v14" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <span>Crest<b>wood</b></span>
+      </a>
+      <nav id="menu" class="nav__links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" class="is-active">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <div class="nav__mobile-actions">
+          <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+          <a href="register.html" class="btn btn--primary">Register</a>
+        </div>
+      </nav>
+      <div class="nav__actions">
+        <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+        <a href="register.html" class="btn btn--primary">Register</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!--Top heading -->
+  <header class="gallery-hero">
+    <p class="gallery-eyebrow">CAMPUS LIFE, CAPTURED</p>
+    <h1>Event Gallery</h1>
+    <p>Explore the events, people, and memories that bring our campus together.</p>
+  </header>
+
+  <main class="gallery-container">
+
+    <!--Search bar at the top -->
+    <section class="gallery-search-section">
+      <label for="gallerySearch">Find an event</label>
+
+      <div class="gallery-search-box">
+        <span aria-hidden="true">⌕</span>
+        <input
+          type="search"
+          id="gallerySearch"
+          placeholder="Search events or categories..."
+          autocomplete="off"
+        >
+      </div>
+
+      <p class="gallery-search-hint">
+        Search by event name, category, or description.
+      </p>
+    </section>
+    <!-- Gallery heading -->
+    <div class="gallery-heading">
+      <div>
+        <p class="gallery-eyebrow gallery-blue-text">CAMPUS HIGHLIGHTS</p>
+        <h2>Our Campus Moments</h2>
+      </div>
+
+      <p class="gallery-count" id="galleryCount">6 events</p>
+    </div>
+
+    <!-- Category filters -->
+    <div class="gallery-filters" aria-label="Filter events by category">
+      <button class="gallery-filter active" data-category="All" type="button">
+        All Events
+      </button>
+
+      <button class="gallery-filter" data-category="Technical" type="button">
+        Technical
+      </button>
+
+      <button class="gallery-filter" data-category="Cultural" type="button">
+        Cultural
+      </button>
+
+      <button class="gallery-filter" data-category="Workshop" type="button">
+        Workshop
+      </button>
+
+      <button class="gallery-filter" data-category="Symposium" type="button">
+        Symposium
+      </button>
+
+      <button class="gallery-filter" data-category="Sports" type="button">
+        Sports
+      </button>
+    </div>
+
+    <!-- Six event cards -->
+    <section class="gallery-grid" id="galleryGrid">
+
+      <!-- 1. Technical event -->
+      <article class="gallery-card" data-category="Technical">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80"
+            alt="Team collaborating with computers on a technology project"
+            loading="lazy"
+          >
+          <span class="gallery-category">Technical</span>
+        </div>
+
+        <div class="gallery-card-content">
+          <h3>Tech Innovation Day</h3>
+          <p>Students explore technology, teamwork, and new ideas.</p>
+        </div>
+      </article>
+
+      <!-- 2. Cultural event -->
+      <article class="gallery-card" data-category="Cultural">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=80"
+            alt="Crowd enjoying a live celebration and music event"
+            loading="lazy"
+          >
+          <span class="gallery-category">Cultural</span>
+        </div>
+
+        <div class="gallery-card-content">
+          <h3>Cultural Festival</h3>
+          <p>A celebration of traditions, performances, and campus spirit.</p>
+        </div>
+      </article>
+
+      <!-- 3. Workshop -->
+      <article class="gallery-card" data-category="Workshop">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80"
+            alt="Instructor leading a learning session in a classroom"
+            loading="lazy"
+          >
+          <span class="gallery-category">Workshop</span>
+        </div>
+
+        <div class="gallery-card-content">
+          <h3>Learning Workshop</h3>
+          <p>Interactive sessions that help students develop new skills.</p>
+        </div>
+      </article>
+
+      <!-- 4. Symposium -->
+      <article class="gallery-card" data-category="Symposium">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=900&q=80"
+            alt="Speaker presenting ideas to an audience at a conference"
+            loading="lazy"
+          >
+          <span class="gallery-category">Symposium</span>
+        </div>
+
+        <div class="gallery-card-content">
+          <h3>Academic Symposium</h3>
+          <p>Ideas, research, and discussions shared by speakers and students.</p>
+        </div>
+      </article>
+
+      <!-- 5. Sports event -->
+      <article class="gallery-card" data-category="Sports">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=80"
+            alt="Athletes running during a sports competition"
+            loading="lazy"
+          >
+          <span class="gallery-category">Sports</span>
+        </div>
+
+        <div class="gallery-card-content">
+          <h3>Campus Sports Day</h3>
+          <p>Students compete, support their teams, and enjoy being active.</p>
+        </div>
+      </article>
+
+      <!-- 6. Technical project showcase -->
+      <article class="gallery-card" data-category="Technical">
+        <div class="gallery-image">
+          <img
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
+            alt="University students working and learning together"
+            loading="lazy"
+          >
+          <span class="gallery-category">Technical</span>
+        </div>
+
+        <div class="gallery-card-content">
+          <h3>Student Project Showcase</h3>
+          <p>Students share their projects, creativity, and achievements.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Shown when no events match -->
+    <p id="galleryEmpty" class="gallery-empty" hidden>
+      No events found. Try another search or category.
+    </p>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__row">
+      <div><a href="index.html" class="logo logo--sm"><span>Crest<b>wood</b></span></a>
+        <p>Discover, join and celebrate campus life.</p>
+      </div>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="events.html">Events</a><a
+          href="about.html">About</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
+      <p class="footer__copy">&copy; 2026 Crestwood. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./js/nav.js"></script>
+  <script>
+    const searchInput = document.getElementById("gallerySearch");
+    const filterButtons = document.querySelectorAll(".gallery-filter");
+    const galleryCards = document.querySelectorAll(".gallery-card");
+    const emptyMessage = document.getElementById("galleryEmpty");
+    const galleryCount = document.getElementById("galleryCount");
+
+    let selectedCategory = "All";
+
+    function filterGallery() {
+      const searchText = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      galleryCards.forEach(function (card) {
+        const category = card.dataset.category;
+        const cardText = card.textContent.toLowerCase();
+
+        const matchesCategory =
+          selectedCategory === "All" ||
+          category === selectedCategory;
+
+        const matchesSearch =
+          cardText.includes(searchText);
+
+        const shouldShow = matchesCategory && matchesSearch;
+
+        card.hidden = !shouldShow;
+
+        if (shouldShow) {
+          visibleCount++;
+        }
+      });
+
+      emptyMessage.hidden = visibleCount !== 0;
+
+      galleryCount.textContent =
+        visibleCount + (visibleCount === 1 ? " event" : " events");
+    }
+
+    // Filter when a category button is clicked
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        selectedCategory = button.dataset.category;
+
+        filterButtons.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+        filterGallery();
+      });
+    });
+
+    // Search as the user types
+    searchInput.addEventListener("input", filterGallery);
+  </script>
+
+</body>
+</html>
+

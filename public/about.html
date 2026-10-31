@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crestwood Institute of Technology</title>
+      <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/about.css">
+</head>
+<body>
+    
+    <header class="nav">
+      <div class="wrap nav__row">
+        <a href="index.html" class="logo" aria-label="Crestwood home">
+          <svg viewBox="0 0 48 44" width="52" height="48" aria-hidden="true">
+            <path d="M24 2 2 12l22 10 22-10z" fill="#fff" />
+            <path d="M11 21v11c0 3 6 7 13 7s13-4 13-7V21l-13 6z" fill="#1d8cf0" />
+            <path d="M42 14v14" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+          </svg>
+          <span>Crest<b>wood</b></span>
+        </a>
+        <nav id="menu" class="nav__links" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="events.html">Events</a>
+          <a href="about.html" class="is-active">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+          <div class="nav__mobile-actions">
+            <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+            <a href="register.html" class="btn btn--primary">Register</a>
+          </div>
+        </nav>
+        <div class="nav__actions">
+          <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+          <a href="register.html" class="btn btn--primary">Register</a>
+        </div>
+        <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"
+          aria-controls="menu"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <p class="section-label">WHO WE ARE</p>
+        <h2>About Our College</h2>
+
+        <p class="about-text">
+            Crestwood Institute of Technology is a fictional
+            educational institution established in 2012. Our college
+            focuses on academic excellence, practical learning,
+            research and personality development. We provide a
+            supportive environment where students can discover
+            their talents and prepare for their future careers.
+        </p>
+
+        <div class="statement-grid">
+            <div class="statement-card">
+                <h3>Principal's Statement</h3>
+                <p>
+                    "Our goal is to develop knowledgeable,
+                    responsible and confident students who can
+                    contribute positively to society."
+                </p>
+                <h4>— Dr. Arun Kumar, Principal</h4>
+            </div>
+
+            <div class="statement-card">
+                <h3>Our Mission</h3>
+                <p>
+                    To provide quality education, encourage
+                    innovation and prepare students for successful
+                    careers through practical learning.
+                </p>
+            </div>
+
+            <div class="statement-card">
+                <h3>Our Vision</h3>
+                <p>
+                    To become a leading institution in education,
+                    technology and research while promoting
+                    ethical values and social responsibility.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section achievements" id="achievements">
+        <p class="section-label">OUR PROGRESS</p>
+        <h2>Achievements & Highlights</h2>
+        <p class="section-description">
+            Inspiring students to achieve excellence in every field.
+        </p>
+
+        <div class="achievement-grid">
+            <div class="achievement-card">
+                <h3>95%</h3>
+                <p>Placement Rate</p>
+            </div>
+
+            <div class="achievement-card">
+                <h3>20+</h3>
+                <p>Student Projects</p>
+            </div>
+
+            <div class="achievement-card">
+                <h3>10+</h3>
+                <p>Technical Awards</p>
+            </div>
+
+            <div class="achievement-card">
+                <h3>15+</h3>
+                <p>Student Clubs</p>
+            </div>
+        </div>
+
+        <div class="highlights">
+            <h3>Our Campus Highlights</h3>
+            <ul>
+                <li>Modern computer and science laboratories</li>
+                <li>Smart classrooms and digital learning facilities</li>
+                <li>Well-equipped library and reading areas</li>
+                <li>Sports facilities and cultural activities</li>
+                <li>Career guidance and placement training</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="section events" id="events">
+        <p class="section-label"><strong>CAMPUS LIFE</strong></p>
+        <h2>Upcoming Events</h2>
+        <p class="section-description">
+            Discover workshops, competitions and exciting campus events.
+        </p>
+
+        <!-- <div class="filter-buttons">
+            <button class="filter-btn active" data-category="All">All</button>
+            <button class="filter-btn" data-category="Technical">Technical</button>
+            <button class="filter-btn" data-category="Cultural">Cultural</button>
+            <button class="filter-btn" data-category="Workshop">Workshop</button>
+            <button class="filter-btn" data-category="Sports">Sports</button>
+        </div> -->
+
+        <!-- JavaScript creates event cards here -->
+        <div class="event-grid" id="eventContainer"></div>
+
+        <p class="no-events" id="noEvents" hidden>
+            No events available in this category.
+        </p>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__row">
+        <div><a href="index.html" class="logo logo--sm"><span>Crest<b>wood</b></span></a>
+          <p>Discover, join and celebrate campus life.</p>
+        </div>
+        <nav aria-label="Footer"><a href="index.html">Home</a><a href="events.html">Events</a><a
+            href="about.html">About</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
+        <p class="footer__copy">&copy; 2026 Crestwood. All rights reserved.</p>
+      </div>
+    </footer>
+
+      <script src="./js/nav.js"></script>
+      <script src="./js/about.js"></script>
+
+</body>
+</html>
